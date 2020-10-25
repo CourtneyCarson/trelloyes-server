@@ -60,11 +60,6 @@ app.get('/', (req, res) => {
   res.send('Hello, world!')
 })
 
-app.get('/card', (req, res) => {
-  res
-    .json(cards);
-});
-
 app.get('/list', (req, res) => {
   res
     .json(lists);
@@ -143,36 +138,7 @@ app.post('/list', (req, res) => {
     .json({id});
 });
 
-// app.post('/card/:id', (req, res) => {
-//   const { title, content } = req.body;
-//   if (!title) {
-//     logger.error(`Title is required`);
-//     return res
-//       .status(400)
-//       .send('Invalid data');
-//   }
-//   if (!content) {
-//     logger.error(`Content is required`);
-//     return res
-//       .status(400)
-//       .send('Invalid data');
-//   }
-//   const id = uuid();
 
-//   const card = {
-//     id,
-//     title,
-//     content
-//   };
-//   cards.push(card);
-
-//   logger.info(`Card with id ${id} created`);
-
-//   res
-//     .status(201)
-//     .location(`http://localhost:8000/card/${id}`)
-//     .json(card);
-// })
 
 
 // app.post('/list/', (req, res) => {
